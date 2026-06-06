@@ -1,0 +1,12 @@
+/* Please enter your CSS here */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table {
+    font-size: 0.95rem;
+}
+
+.badge {
+    padding: 0.4em 0.6em;
+}
