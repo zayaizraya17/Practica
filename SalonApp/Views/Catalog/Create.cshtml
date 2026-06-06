@@ -4,47 +4,71 @@
     ViewData["Title"] = "Добавить товар";
 }
 
-<h1>➕ Добавить товар</h1>
-<hr />
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1><span class="me-2">➕</span>Добавить товар</h1>
+    <a asp-action="Index" class="btn btn-secondary">
+        <span class="me-2">↩️</span>Назад к каталогу
+    </a>
+</div>
 
 <div class="row">
-    <div class="col-md-6">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            
-            <div class="mb-3">
-                <label asp-for="Name" class="form-label">Название товара</label>
-                <input asp-for="Name" class="form-control" placeholder="Например: iPhone 15" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            
-            <div class="mb-3">
-                <label asp-for="Type" class="form-label">Тип товара</label>
-                <select asp-for="Type" class="form-select">
-                    <option value="">-- Выберите тип --</option>
-                    <option value="телефон">Телефон</option>
-                    <option value="аксессуар">Аксессуар</option>
-                </select>
-                <span asp-validation-for="Type" class="text-danger"></span>
-            </div>
-            
-            <div class="mb-3">
-                <label asp-for="Price" class="form-label">Цена (₽)</label>
-                <input asp-for="Price" type="number" step="0.01" class="form-control" placeholder="0" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            
-            <div class="mb-3">
-                <label asp-for="Stock" class="form-label">Остаток на складе (шт.)</label>
-                <input asp-for="Stock" type="number" class="form-control" placeholder="0" />
-                <span asp-validation-for="Stock" class="text-danger"></span>
-            </div>
-            
-            <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">💾 Сохранить</button>
-                <a asp-action="Index" class="btn btn-secondary">↩️ Отмена</a>
-            </div>
-        </form>
+    <div class="col-md-8">
+        <div class="card-custom">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div class="mb-4">
+                    <label asp-for="Name" class="form-label">📝 Название товара</label>
+                    <input asp-for="Name" class="form-control form-control-lg" placeholder="Например: iPhone 15 Pro" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                
+                <div class="mb-4">
+                    <label asp-for="Type" class="form-label">🏷️ Тип товара</label>
+                    <select asp-for="Type" class="form-select form-select-lg">
+                        <option value="">-- Выберите тип --</option>
+                        <option value="телефон">📱 Телефон</option>
+                        <option value="аксессуар">🎧 Аксессуар</option>
+                    </select>
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="Price" class="form-label">💰 Цена (₽)</label>
+                        <input asp-for="Price" type="number" step="0.01" class="form-control form-control-lg" placeholder="0" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="Stock" class="form-label">📦 Остаток на складе (шт.)</label>
+                        <input asp-for="Stock" type="number" class="form-control form-control-lg" placeholder="0" />
+                        <span asp-validation-for="Stock" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a asp-action="Index" class="btn btn-secondary btn-lg me-md-2">
+                        <span class="me-2">❌</span>Отмена
+                    </a>
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <span class="me-2">💾</span>Сохранить товар
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card-custom">
+            <h5 class="mb-3">ℹ️ Подсказка</h5>
+            <ul class="list-unstyled mb-0">
+                <li class="mb-2">✅ Заполните все поля формы</li>
+                <li class="mb-2">✅ Укажите корректную цену</li>
+                <li class="mb-2">✅ Проверьте остаток на складе</li>
+                <li class="mb-2">✅ Нажмите "Сохранить товар"</li>
+            </ul>
+        </div>
     </div>
 </div>
 

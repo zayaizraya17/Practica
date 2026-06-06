@@ -1,33 +1,78 @@
 ```
 # Build results
-**/bin/
-**/obj/
-**/out/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Dd]epends/
+[Mm]icrosoft.VC*.[Dd]LL/
 
-# User-specific files
+# Visual Studio files
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.log
+*.vspscc
+*.vssscc
+.analyzers/
+[bB]in/
+[sS]rc/[oO]bj/
+[sS]rc/[bB]in/
+[vV]isual[Ss]tudio/[tT]est[rR]esults/
+[Bb]uild/[Ll]og/
+[Bb]uild[Tt]emp[lL]ace[Ff]iles/
+
+# Visual Studio Code
+.vscode/
+
+# Web
+obj/
+publish/
+*.nupkg
+[Nn]u[Pp]kg[Tt]emp[lL]ate[sS]/
+[Bb]uild[Tt]emp[lL]ate[sS]/
+
+# ASP.NET Core
+*.dbmdl
+*.dbproj.schemaview.xml
 .vs/
 .vscode/
+
+# User-specific files
 *.user
 *.userosscache
-*.sln.docstates
+*.suo
+*.csproj.user
+*.vbproj.user
+*.userprefs
+
+# Localized resources
+*.resx
 
 # Environment specific settings
 .env
 .env.local
-*.env*
-
-# Dependency directories
-node_modules/
-packages/
+*.env.*
 
 # OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-*.temp
+desktop.ini
 ```
